@@ -1,0 +1,246 @@
+.app-container {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.player {
+    width: 100%;
+    height: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    position: relative;
+}
+
+/* Dashboard */
+.dashboard {
+    height: var(--dashboard-height);
+}
+/* Dashboard__header */
+.dashboard__header {
+    min-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.dashboard__header-down a,
+.dashboard__header-add a{
+    font-size: 20px;
+    color: var(--primary-color);
+    font-weight: 300;
+    padding: 16px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.dashboard__header-title {
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard__header-title-head {
+    font-size: 12px;
+    margin-bottom: 2px;
+    font-weight: 550;
+    color: var(--primary-color);
+    text-align: center;
+}
+
+.dashboard__header-name {
+    font-size: 16px;
+    color: var(--text-color);
+    text-align: center;
+    font-weight: 700;
+}
+
+/* CD */
+.dashboard__cd {
+    display: flex;
+    margin: auto;
+    width: 250px;
+}
+
+.dashboard__cd .cd-thumb {
+    width: 100%;
+    padding-top: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    margin: auto;
+}
+
+/* Dashboard control */
+.dashboard__control-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 20px 32px 10px;
+}
+
+.dashboard__control-item-btn {
+    padding: 20px;
+    -webkit-tap-highlight-color: transparent;
+    text-decoration: none;
+}
+
+.dashboard__control-item-btn--play-pause {
+    padding: 0;
+    display: block;
+    height: 56px;
+}
+
+.dashboard__control-icon{
+    font-size: 20px;
+    color: #8884b7;
+
+}
+
+.dashboard__control-icon.play-icon {
+    font-size: 56px;
+    color: var(--primary-color);
+    display: none;
+}
+
+.dashboard__control-icon.pause-icon {
+    font-size: 56px;
+    color: var(--primary-color);
+    display: none;
+}
+
+.play-btn .dashboard__control-icon.play-icon {
+    display: block;
+}
+
+.pause-btn .dashboard__control-icon.pause-icon {
+    display: block;
+}
+
+.random-btn.active i,
+.repeat-btn.active i{
+    color: var(--primary-color);
+}
+
+/* progress */
+.progress-wrapper {
+    margin: 0 20px;
+}
+
+.progress {
+    width: 100%;
+    background: #d3d3d3;
+    height: 6px;
+    -webkit-appearance: none;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: 0.2s;
+    transition: opacity 0.2s;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 6px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+}
+
+/* Playlist */
+.playlist {
+    background-color: #f0eff4;
+    padding-top: 18px;
+    overflow-y: scroll;
+    height: calc(100% - var(--dashboard-height) - 64px);
+}
+
+.playlist__item {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    height: 84px;
+    box-shadow: 0 2px 3px #dcdce3;
+}
+
+.playlist__item-cd .cd-thumb {
+    width: 58px;
+    height: 58px;
+    background-size: contain;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+    margin: 0 20px;
+}
+
+.playlist__item-name {
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+.playlist__item-singers {
+    font-size: 12px;
+    color: var(--text-color);
+    padding-top: 4px;
+}
+
+.playlist__item-option {
+    margin-left: auto;
+}
+
+.playlist__item-option-link {
+    padding: 20px;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.playlist__item-option i {
+    font-size: 20px;
+}
+
+.playlist__item.active {
+    background-color: var(--primary-color);
+}
+
+.playlist__item.active .playlist__item-name,
+.playlist__item.active .playlist__item-singers,
+.playlist__item.active .playlist__item-option i {
+    color: #fff;
+}
+
+.playlist__item:active {
+    opacity: 0.8;
+}
+
+/* nav */
+.navigation {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 480px;
+    background-color: #14103b;
+}
+
+.nav__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    list-style: none;
+    padding: 0 8px;
+}
+
+.nav__item-link {
+    font-size: 24px;
+    padding: 12px;
+    color: #575284;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.nav__item-link.play-btn {
+    color: var(--primary-color);
+}

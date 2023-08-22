@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/base.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="player">
+            <div class="dashboard">
+                <div class="dashboard__header">
+                    <div class="dashboard__header-down">
+                        <a href="">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div class="dashboard__header-title">
+                        <h3 class="dashboard__header-title-head">Now playing:</h3>
+                        <span class="dashboard__header-name">Sting 57th & 9th</span>
+                    </div>
+                    <div class="dashboard__header-add">
+                        <a href="">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="dashboard__cd">
+                    <div class="cd-thumb" style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+                    </div>
+                </div>
+                <div class="dashboard__control">
+                    <ul class="dashboard__control-list">
+                        <li class="dashboard__control-item">
+                            <div class="dashboard__control-item-btn repeat-btn">
+                                <i class="dashboard__control-icon fa-solid fa-arrow-rotate-right"></i>
+                            </div>
+                        </li>
+                        <li class="dashboard__control-item">
+                            <div class="dashboard__control-item-btn pre-btn">
+                                <i class="dashboard__control-icon fa-solid fa-backward-step"></i>
+                            </div>
+                        </li>
+                        <li class="dashboard__control-item">
+                            <div class="dashboard__control-item-btn dashboard__control-item-btn--play-pause play-btn">
+                                <i class="dashboard__control-icon play-icon fa-solid fa-circle-play"></i>
+                                <i class="dashboard__control-icon pause-icon fa-solid fa-circle-pause"></i>
+                            </div>
+                        </li>
+                        <li class="dashboard__control-item">
+                            <div class="dashboard__control-item-btn next-btn">
+                                <i class="dashboard__control-icon fa-solid fa-forward-step"></i>
+                            </div>
+                        </li>
+                        <li class="dashboard__control-item">
+                            <div class="dashboard__control-item-btn random-btn">
+                                <i class="dashboard__control-icon fa-solid fa-shuffle"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="progress-wrapper">
+                    <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100"></input>
+                </div>
+                <audio src="" id="audio"></audio>
+            </div>
+            <div class="playlist">
+                <ul class="playlist__list">
+                   <!-- Render songs here -->
+                </ul>
+            </div>
+            <nav class="navigation">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="" class="nav__item-link">
+                            <i class="fa-solid fa-house"></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__item-link">
+                            <i class="fa-solid fa-compact-disc"></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__item-link play-btn">
+                            <i class="fa-solid fa-circle-play"></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__item-link">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="" class="nav__item-link">
+                            <i class="fa-solid fa-bars-staggered"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
